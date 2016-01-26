@@ -10,8 +10,16 @@
 	<body ng-controller="TodoListController as todoList">
 		<h2>{{todoList.title}}</h2>
 
-		<button type="button" ng-click="todoList.Random()">TEST Random function()</button>
-		<button type="button" ng-click="todoList.sum()">TEST Random</button>
+		<button type="button" ng-click="todoList.Random()" ng-show ="todoList.show"> Random function(play)</button>
+		<button type="button" ng-click="todoList.sum()">Check console (f12)</button>
+		<button type="button" ng-click="todoList.restart()">restart(reset)</button>
+
+		<div ng-repeat="show in todoList.ranNums">
+			ลำดับที่ {{$index}} <br>
+			{{show.name}} <br>
+			<img src ="{{show.pic}}" width="50" height="50">
+			<hr>
+		</div>
 
 	</body>
 </html>
