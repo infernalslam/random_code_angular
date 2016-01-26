@@ -15,7 +15,7 @@
 		<button type="button" ng-click="todoList.restart()">restart(reset)</button>
 
 		<div ng-repeat="show in todoList.ranNums">
-			ลำดับที่ {{$index}} <br>
+			ลำดับที่ {{$index+1}} <br>
 			{{show.name}} <br>
 			<img src ="{{show.pic}}" width="50" height="50">
 			<hr>
