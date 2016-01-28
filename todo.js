@@ -82,6 +82,7 @@ angular.module('todoApp', [])
   var i = nums.length
   var j = 0
 
+
     todoList.Random = function () {
       while (i--) {
           j = Math.floor(Math.random() * (i+1));
@@ -96,12 +97,22 @@ angular.module('todoApp', [])
         for (var k = 0; k < todoList.ranNums.length; k++) {
           console.log ("point random ("+(k+1)+") :"+todoList.ranNums[k].name)
       }//exit loop for
-
-
     } //end function
 
+
+    var count = 0
+
+      todoList.showlist = function () {
+          if (count > todoList.ranNums.length) {
+            alert("หมดเเล้ว")
+          }
+          todoList.single_name = todoList.ranNums[count].name
+          todoList.single_pic  = todoList.ranNums[count].pic
+          count++
+      }
+
     todoList.restart = function (){
-      window.location = 'index.htm'
+      window.location = 'http://localhost:8080/'
     }
 
 
