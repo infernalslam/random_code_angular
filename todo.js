@@ -8,9 +8,7 @@ angular.module('todoApp', [])
       'เเต๊ก','มิ้น','เฟ้น','เดียร์','กอล์ฟ','บอย','หนึ่ง','ค้อย','ออม','ชัย',
       'ปิง','บีบี','ปราย','ไปร์','ฉัตร','เคน','แบงค์'
     ]*/
-    todoList.ranNums = []
-    var i = nums.length
-    var j = 0
+
     var nums = [{
       name : 'เเต๊ก' ,
       pic  :'/img/tak.jpg'
@@ -80,7 +78,9 @@ angular.module('todoApp', [])
         pic  : '/img/bank.jpg'
     }
   ]
-
+  todoList.ranNums = []
+  var i = nums.length
+  var j = 0
 
     todoList.Random = function () {
       while (i--) {
@@ -101,7 +101,7 @@ angular.module('todoApp', [])
     } //end function
 
     todoList.restart = function (){
-      window.location = 'index.html'
+      window.location = 'index.htm'
     }
 
 
